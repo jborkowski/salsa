@@ -52,6 +52,7 @@ pub use salsa_macros::db;
 pub use salsa_macros::input;
 pub use salsa_macros::interned;
 pub use salsa_macros::tracked;
+pub use salsa_macros::DebugWithDb;
 pub use salsa_macros::Update;
 
 pub mod prelude {

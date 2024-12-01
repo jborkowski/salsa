@@ -38,6 +38,7 @@ mod accumulator;
 mod db;
 mod db_lifetime;
 mod debug;
+mod debug_with_db;
 mod fn_util;
 mod hygiene;
 mod input;
@@ -74,6 +75,11 @@ pub fn input(args: TokenStream, input: TokenStream) -> TokenStream {
 #[proc_macro_attribute]
 pub fn tracked(args: TokenStream, input: TokenStream) -> TokenStream {
     tracked::tracked(args, input)
+}
+
+#[proc_macro_derive(DebugWithDb)]
+pub fn derive_debug_with_db(input: TokenStream) -> TokenStream {
+    debug_with_db::derive_debug_with_db(input)
 }
 
 #[proc_macro_derive(Update)]
